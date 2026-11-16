@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b74yo1jrqyllw"]
+
+[ext_resource type="Script" uid="uid://csqxliax2uoak" path="res://Main/Main.gd" id="1_lxy7q"]
+[ext_resource type="PackedScene" uid="uid://dw43eckdkcpvj" path="res://Platform/Platform.tscn" id="2_83ytx"]
+[ext_resource type="PackedScene" uid="uid://cj2wd7f7nm1ot" path="res://Player/Player.tscn" id="3_amygn"]
+
+[node name="Main" type="Node" unique_id=1990107882]
+script = ExtResource("1_lxy7q")
+
+[node name="Platform" parent="." unique_id=550412497 instance=ExtResource("2_83ytx")]
+position = Vector2(240, 557)
+
+[node name="Platform2" parent="." unique_id=1786674314 instance=ExtResource("2_83ytx")]
+position = Vector2(494, 571)
+
+[node name="Platform3" parent="." unique_id=841290526 instance=ExtResource("2_83ytx")]
+position = Vector2(18, 622)
+scale = Vector2(13.589841, 1)
+
+[node name="Platform4" parent="." unique_id=2083452969 instance=ExtResource("2_83ytx")]
+position = Vector2(726, 590)
+
+[node name="Player" parent="." unique_id=89040790 instance=ExtResource("3_amygn")]
+position = Vector2(532, 328)
