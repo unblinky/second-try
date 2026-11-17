@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://d0wj6gib88x1a"]
+
+[ext_resource type="Script" uid="uid://cca87nuaewjo6" path="res://Level/Jumper.gd" id="1_a526m"]
+[ext_resource type="PackedScene" uid="uid://tl60dv8cn7sf" path="res://Platform/Platform3D.tscn" id="2_r3cbp"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2gduj"]
+sky_top_color = Color(0.50495094, 0.45202327, 0.15114737, 1)
+sky_horizon_color = Color(0.65505207, 0.67377764, 0.59351724, 1)
+ground_bottom_color = Color(0.07222212, 0.20005202, 0.17988634, 1)
+ground_horizon_color = Color(0.65505207, 0.67377764, 0.59351724, 1)
+
+[sub_resource type="Sky" id="Sky_a526m"]
+sky_material = SubResource("ProceduralSkyMaterial_2gduj")
+
+[sub_resource type="Environment" id="Environment_r3cbp"]
+background_mode = 2
+sky = SubResource("Sky_a526m")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fh211"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_fh211"]
+
+[node name="Level" type="Node" unique_id=375347551]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1648739188]
+environment = SubResource("Environment_r3cbp")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1126196375]
+transform = Transform3D(0.4210358, -0.78552324, 0.45352197, 0, 0.49999997, 0.86602545, -0.90704405, -0.3646277, 0.21051787, 0, 72.89573, 0)
+shadow_enabled = true
+
+[node name="Jumper" type="CharacterBody3D" parent="." unique_id=490711766]
+script = ExtResource("1_a526m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Jumper" unique_id=75217139]
+shape = SubResource("CapsuleShape3D_fh211")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Jumper" unique_id=1977512458]
+mesh = SubResource("CapsuleMesh_fh211")
+
+[node name="CameraRig" type="Node3D" parent="Jumper" unique_id=1076913446]
+transform = Transform3D(1, 0, 0, 0, 0.96234345, 0.2718365, 0, -0.2718365, 0.96234345, 0, 0, 0)
+
+[node name="Camera" type="Camera3D" parent="Jumper/CameraRig" unique_id=1478001462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.239155)
+
+[node name="Platform" parent="." unique_id=1993095841 instance=ExtResource("2_r3cbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.9901648, 0)
+
+[node name="Platform2" parent="." unique_id=907449524 instance=ExtResource("2_r3cbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.3840885, -3.2689004, 0.20450592)
+
+[node name="Platform3" parent="." unique_id=1722281109 instance=ExtResource("2_r3cbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.206245, -3.0751772, 0)
