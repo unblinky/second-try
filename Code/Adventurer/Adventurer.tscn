@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dabuo57pyna4n"]
+
+[ext_resource type="Script" uid="uid://cx8hfjor4rps8" path="res://Adventurer/Adventurer.gd" id="1_m3rmq"]
+[ext_resource type="Texture2D" uid="uid://dfukxgkknpxfk" path="res://Main/icon.svg" id="2_cgmjq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fh211"]
+
+[node name="Adventurer" type="CharacterBody2D" unique_id=1939117598]
+script = ExtResource("1_m3rmq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=609226729]
+shape = SubResource("CapsuleShape2D_fh211")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1300166297]
+position = Vector2(0, -13)
+scale = Vector2(0.125, 0.12500001)
+texture = ExtResource("2_cgmjq")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1387519564]
+position = Vector2(0, 7)
+rotation = 3.1415927
+scale = Vector2(0.0625, 0.15625001)
+texture = ExtResource("2_cgmjq")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=748435387]
+position = Vector2(8, 1)
+rotation = 3.1415927
+scale = Vector2(0.0266084, 0.069624916)
+texture = ExtResource("2_cgmjq")
+
+[node name="Icon4" type="Sprite2D" parent="." unique_id=347872453]
+position = Vector2(-8, 1)
+rotation = 3.1415927
+scale = Vector2(0.0266084, 0.069624916)
+texture = ExtResource("2_cgmjq")
