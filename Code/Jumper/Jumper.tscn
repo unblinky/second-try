@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://vx4kw2e0jctr"]
+
+[ext_resource type="Script" uid="uid://cca87nuaewjo6" path="res://Jumper/Jumper.gd" id="1_u36cw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fh211"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_fh211"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fh211"]
+height = 0.4
+radius = 0.7
+
+[node name="Jumper" type="CharacterBody3D" unique_id=2132759993]
+script = ExtResource("1_u36cw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=58131462]
+shape = SubResource("CapsuleShape3D_fh211")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=977376838]
+mesh = SubResource("CapsuleMesh_fh211")
+
+[node name="WallSensor" type="Area3D" parent="." unique_id=12439986]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallSensor" unique_id=590791425]
+shape = SubResource("CylinderShape3D_fh211")
+
+[node name="CameraRig" type="Node3D" parent="." unique_id=1880693123]
+transform = Transform3D(1, 0, 0, 0, 0.96234345, 0.2718365, 0, -0.2718365, 0.96234345, 0, 0, 0)
+
+[node name="Camera" type="Camera3D" parent="CameraRig" unique_id=2128684810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.239155)

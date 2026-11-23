@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0wj6gib88x1a"]
 
-[ext_resource type="Script" uid="uid://cca87nuaewjo6" path="res://Level/Jumper.gd" id="1_a526m"]
+[ext_resource type="PackedScene" uid="uid://vx4kw2e0jctr" path="res://Jumper/Jumper.tscn" id="1_r3cbp"]
 [ext_resource type="PackedScene" uid="uid://tl60dv8cn7sf" path="res://Platform/Platform3D.tscn" id="2_r3cbp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2gduj"]
@@ -16,10 +16,6 @@ sky_material = SubResource("ProceduralSkyMaterial_2gduj")
 background_mode = 2
 sky = SubResource("Sky_a526m")
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fh211"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_fh211"]
-
 [node name="Level" type="Node" unique_id=375347551]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1648739188]
@@ -29,26 +25,17 @@ environment = SubResource("Environment_r3cbp")
 transform = Transform3D(0.4210358, -0.78552324, 0.45352197, 0, 0.49999997, 0.86602545, -0.90704405, -0.3646277, 0.21051787, 0, 72.89573, 0)
 shadow_enabled = true
 
-[node name="Jumper" type="CharacterBody3D" parent="." unique_id=490711766]
-script = ExtResource("1_a526m")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Jumper" unique_id=75217139]
-shape = SubResource("CapsuleShape3D_fh211")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Jumper" unique_id=1977512458]
-mesh = SubResource("CapsuleMesh_fh211")
-
-[node name="CameraRig" type="Node3D" parent="Jumper" unique_id=1076913446]
-transform = Transform3D(1, 0, 0, 0, 0.96234345, 0.2718365, 0, -0.2718365, 0.96234345, 0, 0, 0)
-
-[node name="Camera" type="Camera3D" parent="Jumper/CameraRig" unique_id=1478001462]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.239155)
+[node name="Jumper" parent="." unique_id=2132759993 instance=ExtResource("1_r3cbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4695604, 0, 0)
 
 [node name="Platform" parent="." unique_id=1993095841 instance=ExtResource("2_r3cbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.9901648, 0)
 
 [node name="Platform2" parent="." unique_id=907449524 instance=ExtResource("2_r3cbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.3840885, -3.2689004, 0.20450592)
+
+[node name="Platform4" parent="." unique_id=184207817 instance=ExtResource("2_r3cbp")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -1.8731728, 0.84638405, 0.20450592)
 
 [node name="Platform3" parent="." unique_id=1722281109 instance=ExtResource("2_r3cbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.206245, -3.0751772, 0)
