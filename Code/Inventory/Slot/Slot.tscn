@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://5svj0sgk4re4"]
+
+[ext_resource type="Script" uid="uid://bgy2g7rdt8ywv" path="res://Inventory/Slot/Slot.gd" id="1_wgqer"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_fh211"]
+
+[node name="Slot" type="Node2D" unique_id=1822590674]
+script = ExtResource("1_wgqer")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1705474804]
+position = Vector2(7, 0)
+scale = Vector2(63.5, 56.5)
+mesh = SubResource("QuadMesh_fh211")

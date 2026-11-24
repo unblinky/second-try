@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://qrmyy1mgpgno"]
+
+[ext_resource type="Script" uid="uid://cklck11ayag6x" path="res://Inventory/Inventory.gd" id="1_u6bbq"]
+[ext_resource type="Texture2D" uid="uid://dfukxgkknpxfk" path="res://Main/icon.svg" id="2_xjbm4"]
+
+[node name="Inventory" type="PanelContainer" unique_id=1286789021]
+offset_left = 96.0
+offset_top = 47.0
+offset_right = 356.0
+offset_bottom = 571.0
+script = ExtResource("1_u6bbq")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=222089708]
+layout_mode = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer" unique_id=797833097]
+layout_mode = 2
+texture = ExtResource("2_xjbm4")
+
+[node name="TextureRect2" type="TextureRect" parent="GridContainer" unique_id=1563702832]
+layout_mode = 2
+texture = ExtResource("2_xjbm4")
+
+[node name="TextureRect3" type="TextureRect" parent="GridContainer" unique_id=678661841]
+layout_mode = 2
+texture = ExtResource("2_xjbm4")
+
+[node name="TextureRect4" type="TextureRect" parent="GridContainer" unique_id=1709785329]
+layout_mode = 2
+texture = ExtResource("2_xjbm4")
+
+[node name="TextureRect5" type="TextureRect" parent="GridContainer" unique_id=1611428798]
+layout_mode = 2
+texture = ExtResource("2_xjbm4")
+
+[node name="TextureRect6" type="TextureRect" parent="GridContainer" unique_id=1274711127]
+layout_mode = 2
+texture = ExtResource("2_xjbm4")
+
+[node name="TextureRect7" type="TextureRect" parent="GridContainer" unique_id=1796312218]
+layout_mode = 2
+texture = ExtResource("2_xjbm4")
+
+[node name="TextureRect8" type="TextureRect" parent="GridContainer" unique_id=24390251]
+layout_mode = 2
+texture = ExtResource("2_xjbm4")

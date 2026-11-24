@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://csqxliax2uoak" path="res://Main/Main.gd" id="1_lxy7q"]
 [ext_resource type="PackedScene" uid="uid://dw43eckdkcpvj" path="res://Platform/Platform.tscn" id="2_83ytx"]
 [ext_resource type="PackedScene" uid="uid://cj2wd7f7nm1ot" path="res://Player/Player.tscn" id="3_amygn"]
+[ext_resource type="PackedScene" uid="uid://qrmyy1mgpgno" path="res://Inventory/Inventory.tscn" id="4_6aewd"]
+[ext_resource type="PackedScene" uid="uid://hbi7ymhfgtrv" path="res://Inventory/Item/Item.tscn" id="5_6aewd"]
 
 [node name="Main" type="Node" unique_id=1990107882]
 script = ExtResource("1_lxy7q")
@@ -22,3 +24,15 @@ position = Vector2(726, 590)
 
 [node name="Player" parent="." unique_id=89040790 instance=ExtResource("3_amygn")]
 position = Vector2(532, 328)
+
+[node name="Inventory" parent="." unique_id=1286789021 instance=ExtResource("4_6aewd")]
+offset_left = 49.0
+offset_top = 1.0
+offset_right = 309.0
+offset_bottom = 525.0
+
+[node name="Item" parent="." unique_id=432382352 instance=ExtResource("5_6aewd")]
+offset_left = 693.0
+offset_top = 57.0
+offset_right = 829.0
+offset_bottom = 193.0

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://hbi7ymhfgtrv"]
+
+[ext_resource type="Texture2D" uid="uid://dfukxgkknpxfk" path="res://Main/icon.svg" id="1_8d2oe"]
+
+[node name="Item" type="Button" unique_id=432382352]
+offset_left = 649.0
+offset_top = 163.0
+offset_right = 716.0
+offset_bottom = 194.0
+icon = ExtResource("1_8d2oe")
